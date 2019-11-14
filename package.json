@@ -12,7 +12,10 @@
     "start": "parcel src/index.html --open",
     "build-prod": "parcel build src/index.html"
   },
-  "dependencies": {},
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.11.2",
+    "bootstrap": "^4.3.1"
+  },
   "devDependencies": {
     "parcel-bundler": "^1.12.4",
     "sass": "^1.23.3"
