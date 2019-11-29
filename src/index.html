@@ -4,15 +4,54 @@
         <title>Creaknol | Graphic Design</title>
         <meta charset="utf-8">
         <link rel="icon" type="image/png" href="/favicon.png" />
+        <link href="styles.css" rel="stylesheet">
     </head>
     <body>
-        <div id="app">
 
-            <div class="container">
-                test
+        <div class="nav-menu-wrapper">
+            <div id="navMenu" class="overlay">
+                <a href="javascript:void(0)" id="closeNav" class="close-nav">&times;</a>
+                <div class="overlay-content">
+                    <a href="#">Illustrations</a>
+                    <a href="#">Contact</a>
+                </div>
             </div>
+            <span id="openNav" class="open-nav">&#9776;</span>
         </div>
+
+        <section class="container-fluid home-wrapper">
+            <div class="row wrapper">
+                <div class="col-12 col-md-5">
+                    <div class="description-wrapper">
+                        <h1 class="title">Graphic Design</h1>
+
+                        <div class="logo-wrapper">
+                            <img class="logo" src="assets/images/logo.svg" alt="">
+                        </div>
+                        
+                        <p class="intro">Drawing is a passion that I want to share with you. I invite you to click on the link below to see more portraits.</p>
+                        
+                        <div class="link-wrapper">
+                            <a href="#" class="link">See more illustrations</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- <div class="col-12">
+                    <img class="logo" src="assets/images/insta.png" alt="">
+                </div> -->
+            </div>
+        </section>
 
         <script src="index.js"></script>
     </body>
 </html>
+
+<!--
+ 
+    1. Minifier le scss dans le link il devrait avoir .css et non .scss
+    2. Js ne fonctionne pas quand je le met dans index.js
+    3. Comment inclure des svg (non dans une image) et changer le fill
+    4. Faire des template comme des includes pour le menu par exemple
+
+-->

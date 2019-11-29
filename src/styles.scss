@@ -1,8 +1,11 @@
 @import '~bootstrap/scss/bootstrap';
+@import 'scss/_variables';
+@import 'scss/nav-menu';
 
-$primary-color: white;
-$bg: black;
-h1 {
-  color: $primary-color;
-  background-color: $bg;
-}
+@import 'scss/home.scss';
+
+
+html { 
+    font-size: 62.5%; 
+} 
+
