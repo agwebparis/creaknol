@@ -1,6 +1,6 @@
 @import '~bootstrap/scss/bootstrap';
-@import 'scss/_variables';
-@import 'scss/nav-menu';
+@import 'scss/utilities/variables';
+@import 'scss/components/nav-menu';
 
 @import 'scss/home.scss';
 
@@ -8,4 +8,10 @@
 html { 
     font-size: 62.5%; 
 } 
+
+body {
+    font-family: $font-primary-regular;
+    font-size: 1.5rem; 
+    line-height: 1.5;
+}
 
