@@ -1,0 +1,25 @@
+@import "~bootstrap/scss/_functions.scss";
+@import "~bootstrap/scss/_variables.scss";
+@import "~bootstrap/scss/_mixins.scss";
+@import "~bootstrap/scss/_root.scss";
+@import "~bootstrap/scss/_reboot.scss";
+@import "~bootstrap/scss/_grid.scss";
+// @import '~bootstrap/scss/_utilities.scss';
+
+
+@import './core/_variables.scss';
+@import './components/_nav-menu.scss';
+
+@import './home.scss';
+
+
+html { 
+    font-size: 62.5%; 
+} 
+
+body {
+    font-family: $font-primary-regular;
+    font-size: 1.5rem; 
+    line-height: 1.5;
+}
+
