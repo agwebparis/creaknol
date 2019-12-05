@@ -1,24 +1,22 @@
-function changeSize(newSizeInPercent) {
-  document.getElementById('navMenu').style.width = parseInt(newSizeInPercent) + '%';
-}
-
-function openNav() {
-  changeSize(100);
-}
-
-function closeNav() {
-  changeSize(0);
-}
-
 const loadNavMenu = () => {
 
-  document.getElementById('openNav').addEventListener('click', function() {
-    openNav();
-  });
+	const toggle = document.getElementById('menuToggle');
+	const nav = document.getElementById('navMenu');
 
-  document.getElementById('closeNav').addEventListener('click', function() {
-    closeNav();
-  });
-};
+	toggle.addEventListener('click', (e)=> {
+    e.preventDefault();
+    
+		if( toggle.classList.contains('open')) {
+			toggle.classList.remove('open');
+            nav.classList.remove('open');
+      
+		} else {
+			toggle.classList.add('open');
+			nav.classList.add('open');
+		}
+	});
+}
 
 export default loadNavMenu;
+
+
