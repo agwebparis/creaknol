@@ -2,17 +2,59 @@
 <html>
     <head>
         <title>Creaknol | Graphic Design</title>
-        <meta charset="utf-8">
+        <meta charset="utf-8" />
+        <meta name="language" content="english"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="author" content="Aurore Grand" />
+        <meta name="designer" content="Aurore Grand" />
+        <meta name="copyright" content="© Copyright 2020" />
+        <meta name="description" content="Drawing is a passion that I want to share with you." />
+
         <link rel="icon" type="image/png" href="/favicon.png" />
+        <link href="/scss/styles.scss" rel="stylesheet" />
     </head>
     <body>
-        <div id="app">
 
-            <div class="container">
-                test
+        <div class="main-menu-wrapper">
+            <div class="menu-toggle-wrapper">
+                <div id="menuToggle" class="menu-toggle">
+                    <span class="item-toggle"></span>
+                </div>
             </div>
+            <nav id="overlayNavbar" class="overlay-navbar">
+                <div class="overlay-content">
+                    <a class="item-menu" href="#">Illustrations</a>
+                    <a class="item-menu" href="#">Contact</a>
+                </div>
+            </nav>
         </div>
 
-        <script src="index.js"></script>
+        <main>
+
+<!-- LightWidget WIDGET -->
+<!-- <script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script><iframe src="//lightwidget.com/widgets/8dbad7149c27579dba7b862081748c73.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width:100%;border:0;overflow:hidden;"></iframe> -->
+            <section class="container-fluid home-page-container">
+                <div class="row body-content">
+                    <div class="col-12 col-md-5">
+                        <div class="content">
+                            <p class="subtitle">Graphic Design</p>
+
+                            <div class="main-logo">
+                                <img src="assets/images/logo.svg" alt="">
+                            </div>
+                            
+                            <p class="item-text">Drawing is a passion that I want to share with you. I invite you to click on the link below to see more portraits.</p>
+                            
+                            <div class="link-wrapper">
+                                <a href="#" class="item-link">See more illustrations</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <script src="index.js" defer></script>
     </body>
 </html>

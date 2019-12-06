@@ -1,0 +1,115 @@
+.main-menu-wrapper {
+    position: relative;
+
+    .menu-toggle {
+        cursor: pointer;
+        backface-visibility: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 1rem 1.5rem;
+        position: absolute;
+        top: 4rem;
+        right: 4rem;
+        transition: box-shadow 0.4s ease;
+        height: 6rem;
+        width: 6rem;
+        z-index: 3;
+
+        > .item-toggle {
+            background-color: $white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            flex: none;
+            transition: all 0.4s ease;
+            height: 0.3rem;
+            width: 100%;
+            
+            &::before,
+            &::after {
+                content: '';
+                background: inherit;
+                position: absolute;
+                top: -1rem;
+                left: 0;
+                transition: all 0.4s ease;
+                height: 0.3rem;
+                width: 100%;
+                z-index: 1;
+            }
+
+            &::after {
+                top: 1rem;
+            }
+        }
+
+        &.open {
+        
+            > .item-toggle {
+                transform: rotate(135deg);
+
+                &::before,
+                &::after {
+                    top: 0;
+                    transform: rotate(90deg);
+                }
+
+                &::after {
+                    opacity: 0;
+                }
+            }
+
+            &:hover {
+
+                > div {
+                    -webkit-transform: rotate(225deg);
+                    transform: rotate(225deg);
+                }
+            }
+        }
+    }
+
+    .overlay-navbar  {
+        background-color: rgba($black, 0.9);
+        position: fixed;
+        top: 0;
+        left: 0;
+        overflow-x: hidden;
+        transition: 0.5s;
+        height: 100%;
+        width: 0;
+        z-index: 2;
+
+        &.open {
+            width: 100%;
+        }
+
+        .overlay-content {
+            position: relative;
+            top: 25%;
+            text-align: center;
+            margin-top: 3rem;
+            width: 100%;
+
+            .item-menu {
+                display: block;
+                color: $inactive-link;
+                font-size: 2rem;
+                text-decoration: none;
+                padding: 0.8rem;
+                transition: 0.3s;
+    
+                &:hover,
+                &:focus {
+                    color: $white;
+                }
+    
+                @include media-breakpoint-up(md) { 
+                    font-size: 3.6rem;
+                }
+            }
+        }        
+    }
+}

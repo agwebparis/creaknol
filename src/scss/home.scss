@@ -1,0 +1,110 @@
+.home-page-container {
+    background: $black url('/assets/images/bg-home.jpg') no-repeat;
+    background-size: cover;
+
+    @include media-breakpoint-between(xs, md) { 
+        background-position: center center;
+        position: fixed;
+        height: 100%;
+        z-index: 0;
+    }
+
+    @include media-breakpoint-up(md) { 
+        height: 100vh;
+    }
+
+    .body-content {
+        align-items: flex-end;
+        height: 100%;
+
+        @include media-breakpoint-up(md) { 
+            align-items: center;
+            justify-content: flex-end;
+        }
+    }
+
+    .content {
+        color: $white;
+        padding: 2rem;
+
+        @include media-breakpoint-up(md) { 
+            padding-left: 5rem;
+            padding-right: 5rem;
+        }
+
+        .subtitle {
+            font-family: $font-regular;
+            font-size: 2rem;
+            letter-spacing: 0.25rem;
+            margin-bottom: 2rem;
+            text-transform: uppercase;
+        }
+        
+        .main-logo {
+            margin-bottom: 5rem;
+
+            img {
+
+                margin-left: -0.5rem;
+                height: 10rem;
+
+                @include media-breakpoint-up(md) {
+                    height: 13rem;
+                }
+            }
+        }
+    
+        .item-text {
+            font-size: 1.6rem;
+            line-height: 1.75;
+            margin-bottom: 3rem;
+        }
+    }
+}
+
+.link-wrapper { 
+
+    .item-link{
+        display: inline-block;
+        box-shadow: 0 0 1px $black;
+        color: $inactive-link;
+        cursor: pointer;
+        font-family: $font-regular;
+        font-size: 1.6rem;
+        position: relative;
+        overflow: hidden;
+        padding-bottom: 0.5rem;
+        text-decoration: none;
+        transition-duration: 0.3s;
+        transform: perspective(1px) translateZ(0);
+        vertical-align: middle;
+
+        &:hover {
+            color: $link;
+            text-decoration: none;
+        }
+
+        &:before {
+            content: "";
+            background: $link;
+            position: absolute;
+            left: 0;
+            right: 100%;
+            bottom: 0;
+            transition-property: right;
+            transition-duration: 0.3s;
+            transition-timing-function: ease-out;
+            height: 0.4rem;
+            z-index: -1;
+        }
+
+        &:hover,
+        &:focus,
+        &:active {
+
+            &:before {
+                right: 0;
+            }
+        }
+    }
+}
